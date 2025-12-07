@@ -1,0 +1,34 @@
+File "/Users/ddy2025/app.py", line 1 <html>
+  
+import matplotlib.pyplot as plt
+import pandas as pd
+import streamlit as st
+course = "Python Programming"
+
+
+st.title('Car gas consumption')
+df = pd.read_csv(
+    'https://raw.githubusercontent.com/iantonios/dsc205/refs/heads/main/mpg.csv')
+
+if st.checkbox('Show raw data'):
+    st.subheader('Raw data')
+    st.write(df)
+
+st.markdown('---')
+st.subheader('Gas consumption by country of origin')
+
+origin = st.radio('Select country of origin', ('US', 'Europe', 'Japan'))
+
+if origin == 'US':
+    df = df.loc[df['origin'] == 'usa']
+elif origin == 'Europe':
+    df = df.loc[df['origin'] == 'europe']
+else:
+    df = df.loc[df['origin'] == 'japan']
+
+fig = plt.figure()
+ax = fig.add_subplot()
+ax.set_xlabel('mpg')
+ax.hist(df['mpg'])
+st.pyplot(fig)
+st.markdown('---')
