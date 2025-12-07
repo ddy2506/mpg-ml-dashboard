@@ -18,3 +18,15 @@ This project demonstrates a complete data analysis and machine learning pipeline
 
 ## How to Run the App Locally
 1. Install dependencies:
+2. Run the Streamlit app:
+
+
+## Sample Outputs
+Charts are available in the `charts/` folder:
+- Average MPG by Origin
+- MPG Distribution
+- MPG Prediction Line
+
+## Author
+Dandy Di  
+Remote Data Analyst & Machine Learning Beginner
