@@ -46,5 +46,22 @@ These plots can be used in reports, CVs, or presentations.
 1. Clone this repository:
 
    ```bash
+
+ ---
+
+## 🩺 Project 2: Diabetes Risk Prediction (Classification)
+
+A simple machine learning demo that predicts diabetes risk from medical measurements.
+
+- Loaded and cleaned a public diabetes dataset with missing values
+- Filled missing values using column means
+- Trained a logistic-style model to predict `Outcome` (diabetes: 0/1)
+- Built an interactive Streamlit app:
+  - User enters patient-like values (Glucose, BloodPressure, BMI, Age, etc.)
+  - App shows a predicted risk probability (%)
+  - Displays "High Risk" or "Low Risk" as a demo indicator
+
+> ⚠️ This is an educational demo only and **not** medical advice.
+  
    git clone https://github.com/ddy2506/mpg-ml-dashboard.git
    cd mpg-ml-dashboard
